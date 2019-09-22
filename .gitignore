@@ -1,0 +1,14 @@
+.gradle
+.idea
+.metadata
+bin/
+*.tmp
+*.bak
+*.swp
+*~.nib
+.settings/
+.loadpath
+.recommenders
+gradlew.bat
+gradlew
+gradle
