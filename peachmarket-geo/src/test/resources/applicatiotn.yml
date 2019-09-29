@@ -1,0 +1,47 @@
+resource-path: ${user.home}${file.separator}wellbuy-resource${file.separator}
+---
+spring:
+  profiles: test
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+    username: testAdmin
+    password: testPassword
+  data:
+    mongodb:
+      uri: mongodb://wbyadmin:wby100@localhost:27017/wellbuy?authSource=admin&authMechanism=SCRAM-SHA-1
+
+logging:
+  level:
+    kr:
+      co:
+        well_buy: debug
+    org:
+      hibernate: info
+      springframework:
+        security: info
+server:
+  port: 38081
+---
+spring:
+  profiles: test-mysql
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/wellbuy?useSSL=false&useUnicode=true&characterEncoding=utf8
+    username: wbyadmin
+    password: wby100
+  data:
+    mongodb:
+      uri: mongodb://wbyadmin:wby100@localhost:27017/wellbuy?authSource=admin&authMechanism=SCRAM-SHA-1
+
+logging:
+  level:
+    kr:
+      co:
+        well_buy: debug
+    org:
+      hibernate: info
+      springframework:
+        security: info
+server:
+  port: 38081

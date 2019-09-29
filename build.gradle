@@ -14,8 +14,8 @@ buildscript {
 
 
 allprojects {
-    group = 'kr.co.well_buy'
-    version = '1.0.9'
+    group = 'com.peachmarket'
+    version = '1.0.0'
 
     repositories {
         mavenCentral()
@@ -34,7 +34,7 @@ subprojects {
     dependencies {
         implementation('org.springframework.boot:spring-boot-starter-data-jpa')
         implementation('org.springframework.boot:spring-boot-starter-mail')
-        implementation('org.springframework.boot:spring-boot-starter-security')
+//        implementation('org.springframework.boot:spring-boot-starter-security')
         implementation('org.springframework.boot:spring-boot-starter-web')
         implementation('org.springframework.boot:spring-boot-starter-jdbc')
 
@@ -50,6 +50,9 @@ subprojects {
         compileOnly('org.projectlombok:lombok:1.18.4')
         testCompileOnly('org.projectlombok:lombok:1.18.4')
         annotationProcessor 'org.projectlombok:lombok:1.18.8'
+
+        compile 'org.springframework.boot:spring-boot-starter-webflux'
+        compile 'org.projectreactor:reactor-spring:1.0.1.RELEASE'
 
 //        testImplementation('org.springframework.boot:spring-boot-starter-test')
 //        testImplementation('org.springframework.security:spring-security-test')
@@ -83,9 +86,15 @@ subprojects {
 
 }
 
-project(':peachmarket-core'){
+project(':peachmarket-login'){
     dependencies{
-        compile project(':peachmarket-login')
+        compile project(':peachmarket-core')
+    }
+}
+
+project(':peachmarket-geo'){
+    dependencies{
+        compile project(':peachmarket-core')
     }
 }
 

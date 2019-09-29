@@ -12,3 +12,8 @@ bin/
 gradlew.bat
 gradlew
 gradle
+peachmarket-geo/build/libs
+peachmarket-geo/build
+peachmarket-login/build
+peachmarket-core/build
+peachmarket-geo/out

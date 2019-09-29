@@ -2,4 +2,5 @@ rootProject.name = 'peachmarket'
 
 include 'peachmarket-core'
 include 'peachmarket-login'
+include 'peachmarket-geo'
 
