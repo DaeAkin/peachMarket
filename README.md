@@ -6,7 +6,7 @@
 
 #### 👨🏻‍💻[In kyu Park](https://github.com/dlsrb2010) React Developer
 
-#### 👨🏻‍💻[ho seok Jeong](https://github.com/hsjung2015) React Developer
+#### 👨🏻‍💻[Ho seok Jeong](https://github.com/hsjung2015) React Developer
 
 
 
